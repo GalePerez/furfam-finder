@@ -2,17 +2,15 @@ import { useState } from 'react';
 
 function ContactUs() {
     const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Add logic to handle form submission, such as sending an email or storing the message in a database
-    // For this example, we'll just log the form data
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-  };
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+    };
     return (
         <>
          <div>

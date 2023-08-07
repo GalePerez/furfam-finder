@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import ContactUs from './ContactUs';
 
 function Home() {
     return (
