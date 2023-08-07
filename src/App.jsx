@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import OurAnimals from "./pages/OurAnimals"
 import ContactUs from "./pages/ContactUs"
 import AboutUs from "./pages/AboutUs"
+import './style/main.css'
 
 function App() {
   return (
