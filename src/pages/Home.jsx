@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 import '../style/home.css';
+import '../style/main.css';
 
 function Home() {
     return (
         <>
-    <div>
+    <div className='body'>
+        <img src="https://stowvets.co.uk/wp-content/uploads/sites/178/2020/10/MiPet-Cover-Pet-Insurance-Banner-Oct20-1.jpg" className="cover-photo" />
+        <h1>FurFam Finder</h1>
+        <h4>Discover your perfect FurFam today! 🐾🏠 Adopt, love, cherish.</h4>
         <section className="featured-pets">
             <h2>Featured Pets for Adoption</h2>
             <div className="pet-card">

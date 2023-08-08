@@ -1,4 +1,15 @@
+.body {
+    background-color: var(--background);
+}
+
 .featured-pets > h2 {
     color: var(--accent);
 }
 
+.cover-photo {
+    width: 100vw;
+}
+
+@media screen and (max-width: 768px) {
+
+}
