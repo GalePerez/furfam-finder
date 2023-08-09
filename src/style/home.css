@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+a {
+    text-decoration: none;
+}
+
 .body {
     background-color: var(--background);
     overflow-x: hidden;
@@ -35,76 +39,112 @@
         font-size: 3.5vw;
         color: var(--primary-700);
         text-align: center;
+        margin-bottom: 20px;
     }
     
     .featured-pets > h2 {
         color: var(--accent);
-        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-family: 'Pacifico', Arial, Helvetica, sans-serif;
         text-align: center;
+        font-size: 3vw;
+        margin-bottom: 30px;
     }
     
     .show-more {
         display: flex;
         justify-content: center;
         margin: 20px;
+        margin-bottom: 200px;
+        margin-top: 50px;
     }
 
     .about-us-container {
         display: flex;
+        margin-bottom: 200px;
     }
 
-    .about-us-photos > img {
-        border-radius: 30px;
-        margin: 5px;
-        opacity: 80%;
-    }
+        .about-us-photos > img {
+            border-radius: 30px;
+            margin: 5px;
+            opacity: 80%;
+        }
 
-    .about-us-photos {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+        .about-us-photos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    .about-us {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
+        .about-us {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: var(--primary-500);
+            padding-left: 20px;
+            border-radius: 40px;
+        }
 
-    .about-us-title {
-        font-family: 'Koulen', Arial, Helvetica, sans-serif;
-        font-size: 8vw;
-        color: var(--primary-800);
-        margin-right: 50px;
-    }
+        .about-us-title {
+            font-family: 'Koulen', Arial, Helvetica, sans-serif;
+            font-size: 8vw;
+            color: var(--primary-800);
+            margin-right: 50px;
+        }
 
-    .about-us-text {
-        font-family: 'Koulen', Arial, Helvetica, sans-serif;
-        font-size: 1.8rem;
-        color: var(--primary-700);
-    }
+        .about-us-text {
+            font-family: 'Koulen', Arial, Helvetica, sans-serif;
+            font-size: 1.8rem;
+            color: var(--primary-700);
+        }
 
-    .contact {
+    .contact-container {
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
-        flex-direction: row;
+        margin-bottom: 150px;
     }
+        .contact {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+        }
 
-    .questions {
-        font-family: 'Koulen', Arial, Helvetica, sans-serif;
-        font-size: 8vw;
-        color: var(--primary-800);
-    }
+            .questions {
+                font-family: 'Koulen', Arial, Helvetica, sans-serif;
+                font-size: 5vw;
+                color: var(--primary-700);
+            }
 
-    .contact-us-text {
-        font-family: 'Koulen', Arial, Helvetica, sans-serif;
-        font-size: 3rem;
-        color: var(--primary-100);
-        background-color: var(--accent);
-        border-radius: 20px;
-        padding: 0 10px;
-    }
+            .contact-us-text {
+                font-family: 'Koulen', Arial, Helvetica, sans-serif;
+                font-size: 8vw;
+                color: var(--primary-800);
+            }
+
+            .contact-links {
+                display: flex;
+            }
+        
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .icons {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                color: var(--primary-700);
+            }
+
+            .icon-text {
+                font-size: 1.8rem;
+                margin-left: 20px;
+            }
+
+            
+
+        
 
 
 

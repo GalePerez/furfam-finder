@@ -9,7 +9,7 @@ button {
     border: 1px solid transparent;
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 30px;
     color: white;
   }
   
@@ -18,7 +18,7 @@ button {
   }
   
   button > svg {
-    width: 34px;
+    width: 40px;
     margin-left: 10px;
     transition: transform .3s ease-in-out;
   }

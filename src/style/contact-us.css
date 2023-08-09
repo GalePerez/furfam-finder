@@ -1,0 +1,5 @@
+.body {
+    background-color: var(--background);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

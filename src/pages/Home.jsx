@@ -20,9 +20,9 @@ function Home() {
         </div>
       <section className='about-us-container'>
         <div className='about-us-photos'>
-            <img src='https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*' style={{width: "200px"}} />
-            <img src='https://www.campbellrivervet.com/wp-content/uploads/sites/282/2022/05/Husky-1000x650.jpg' style={{width: "300px"}}/>
-            <img src='https://www.dutch.com/cdn/shop/articles/shutterstock_149121098.jpg?v=1668634262' style={{width: "350px"}}/>
+            <img src='https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*' style={{width: "220px"}} />
+            <img src='https://www.campbellrivervet.com/wp-content/uploads/sites/282/2022/05/Husky-1000x650.jpg' style={{width: "320px"}}/>
+            <img src='https://www.dutch.com/cdn/shop/articles/shutterstock_149121098.jpg?v=1668634262' style={{width: "380px"}}/>
         </div>
         <section className="about-us">
           <h1 className='about-us-title'>About Us</h1>
@@ -37,9 +37,35 @@ function Home() {
           </p>
         </section>
       </section>
-      <section className="contact">
-          <h1 className="questions">QUESTIONS?</h1>
-          <Link to="contact-us" className='contact-us-text'><p>Contact Us Here</p></Link>
+      <section className='contact-container'>
+        <section className="contact">
+            <h1 className="questions">QUESTIONS?</h1>
+            <p className='contact-us-text'>Contact Us</p>
+        </section>
+        <section className='icon-container'>
+          <Link to={"https://mail.google.com/mail/u/0/#inbox"}  target="_blank">
+            <div className='icons'>
+              <i class="fa-regular fa-envelope fa-2xl" style= {{color: "#3a4f44;"}}></i>
+              <p className='icon-text'>furfamily@gmail.com</p>
+            </div>
+          </Link>
+            <div className='icons'>
+              <i class="fa-solid fa-phone fa-2xl" style={{color: "#3a4f44;"}}></i>
+              <p className='icon-text'>091234560</p>
+            </div>
+          <Link to={"https://www.instagram.com/</section>"} target="_blank">
+            <div className='icons'>
+              <i class="fa-brands fa-instagram fa-2xl" style={{color: "#3a4f44;"}}></i>
+              <p className='icon-text'>furfamily_finder</p>
+            </div>
+          </Link>
+          <Link to={"https://www.facebook.com/</section>"} target="_blank">
+            <div className='icons'>
+              <i class="fa-brands fa-facebook fa-2xl" style={{color: "#3a4f44;"}}></i>
+              <p className='icon-text'>Furfamily Finder</p>
+            </div>
+          </Link>
+        </section>
       </section>
 
       
