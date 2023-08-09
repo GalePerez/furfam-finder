@@ -16,7 +16,7 @@ function Home() {
             <FeaturedPets />
         </section>
         <div className='show-more'>
-          <Button >Show More</Button>
+          <Link to="/our-animals"><Button >Show More</Button></Link>
         </div>
       <section className='about-us-container'>
         <div className='about-us-photos'>
@@ -38,8 +38,8 @@ function Home() {
         </section>
       </section>
       <section className="contact">
-          <h1>QUESTIONS?</h1>
-          <Link to="contact-us">Contact Us</Link>
+          <h1 className="questions">QUESTIONS?</h1>
+          <Link to="contact-us" className='contact-us-text'><p>Contact Us Here</p></Link>
       </section>
 
       

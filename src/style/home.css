@@ -4,6 +4,7 @@
 .body {
     background-color: var(--background);
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .cover-photo {
@@ -81,6 +82,28 @@
         font-family: 'Koulen', Arial, Helvetica, sans-serif;
         font-size: 1.8rem;
         color: var(--primary-700);
+    }
+
+    .contact {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .questions {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 8vw;
+        color: var(--primary-800);
+    }
+
+    .contact-us-text {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+        color: var(--primary-100);
+        background-color: var(--accent);
+        border-radius: 20px;
+        padding: 0 10px;
     }
 
 
