@@ -8,7 +8,7 @@ function Home() {
     return (
         <>
     <div className='body'>
-        <img src="https://stowvets.co.uk/wp-content/uploads/sites/178/2020/10/MiPet-Cover-Pet-Insurance-Banner-Oct20-1.jpg" className="cover-photo" style={{opacity: '80%', width: "100vw"}} />
+        <img src="https://stowvets.co.uk/wp-content/uploads/sites/178/2020/10/MiPet-Cover-Pet-Insurance-Banner-Oct20-1.jpg" className="cover-photo" style={{opacity: '60%', width: "100vw"}} />
         <h1 className='title'>FurFam Finder</h1>
         <h4>Discover your perfect FurFam today! 🐾🏠 Adopt, love, cherish.</h4>
         <section className="featured-pets">

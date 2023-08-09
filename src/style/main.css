@@ -1,4 +1,8 @@
 /* Normalize CSS */
+* {
+  margin: 0;
+}
+
 *,
 ::after,
 ::before {
@@ -25,7 +29,7 @@ html {
   --primary-900: #1d2722;
   --accent: #6f4d93;
   --secondary: #e3d6ca;
-  --background: #efe8e1;
+  --background: #ecd8c5;
 
   /* grey */
   --grey-50: #f8fafc;

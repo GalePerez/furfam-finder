@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Khand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .body {
     background-color: var(--background);
@@ -19,11 +19,11 @@
         z-index: 3;
         position: absolute;
         top: 28vh;
-        left: 20vw;
-        right: auto;
-        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        left: 10vw;
+        right: 10vw;
+        font-family: 'Pacifico', Arial, Helvetica, sans-serif;
         font-size: 10vw;
-        color: rgb(8, 61, 21);
+        color: var(--primary-800);
         margin-left: 10px;
         
     }
@@ -31,14 +31,14 @@
     h4 {
         z-index: 3;
         font-family: 'Koulen', Arial, Helvetica, sans-serif;
-        font-size: 3vw;
-        color: rgb(34, 85, 49);
-        margin-left: 10px;
+        font-size: 3.5vw;
+        color: var(--primary-700);
+        text-align: center;
     }
     
     .featured-pets > h2 {
         color: var(--accent);
-        font-family: 'Khand', sans-serif;
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
         text-align: center;
     }
     
@@ -47,4 +47,6 @@
         justify-content: center;
         margin: 20px;
     }
+
+
 }

@@ -72,12 +72,12 @@ function NavBar() {
             </div>
         </nav> */
 
-        <nav className="navbar">
+        <nav className="navbar py-0">
             <div className="navbar-container">
             <Link to="/" className="navbar-logo">
                 <img src={logo} alt="logo" width="40" height="40" />
-                FurFamFinder
             </Link>
+            <Link to="/" className="name" > FurFamFinder</Link>
                 <div className={`nav-menu  ${isOpen ? 'active' : ''}`}>
                     <ul className="nav-list">
                         <li className="nav-item">
