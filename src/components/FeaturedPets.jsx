@@ -1,18 +1,35 @@
+import "../style/featuredpets.css"
+
 function FeaturedPets() {
     return (
-        <>
-         <div className="pet-card">
-                <img src="pet1.jpg" alt="Featured Pet 1" />
-                <h3>Pet Name</h3>
-                <p>Breed: Breed Name</p>
-                <p>Age: X years</p>
+        <> 
+            <div className="row">
+                    <div className="card pet-card col-3 p-0" style={{width: "20rem"}}>
+                        <img src="https://i.etsystatic.com/22272444/r/il/c268c8/2175449994/il_fullxfull.2175449994_39b8.jpg" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
+                        </div>
+                    </div>
+                    <div className="card pet-card col-3 p-0" style={{width: "20rem"}}>
+                        <img src="https://i.etsystatic.com/22272444/r/il/c268c8/2175449994/il_fullxfull.2175449994_39b8.jpg" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
+                        </div>
+                    </div>
+                    <div className="card pet-card col-3 p-0" style={{width: "20rem"}}>
+                        <img src="https://i.etsystatic.com/22272444/r/il/c268c8/2175449994/il_fullxfull.2175449994_39b8.jpg" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
+                        </div>
+                    </div>
+                    <div className="card pet-card col-3 p-0" style={{width: "20rem"}}>
+                        <img src="https://i.etsystatic.com/22272444/r/il/c268c8/2175449994/il_fullxfull.2175449994_39b8.jpg" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">Card title</h5>
+                        </div>
+                    </div>
             </div>
-            <div className="pet-card">
-                <img src="pet2.jpg" alt="Featured Pet 2" />
-                <h3>Pet Name</h3>
-                <p>Breed: Breed Name</p>
-                <p>Age: X years</p>
-            </div> 
+             
         </>
     )
 }

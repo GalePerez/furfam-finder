@@ -2,18 +2,22 @@ import { Link } from 'react-router-dom';
 import '../style/home.css';
 import '../style/main.css';
 import FeaturedPets from '../components/FeaturedPets';
+import Button from '../components/button';
 
 function Home() {
     return (
         <>
     <div className='body'>
-        <img src="https://stowvets.co.uk/wp-content/uploads/sites/178/2020/10/MiPet-Cover-Pet-Insurance-Banner-Oct20-1.jpg" className="cover-photo" style={{opacity: '80%'}} />
+        <img src="https://stowvets.co.uk/wp-content/uploads/sites/178/2020/10/MiPet-Cover-Pet-Insurance-Banner-Oct20-1.jpg" className="cover-photo" style={{opacity: '80%', width: "100vw"}} />
         <h1 className='title'>FurFam Finder</h1>
         <h4>Discover your perfect FurFam today! 🐾🏠 Adopt, love, cherish.</h4>
         <section className="featured-pets">
-            <h2>Featured Pets for Adoption</h2>
+            <h2>Featured Pets for Adoption:</h2>
             <FeaturedPets />
         </section>
+        <div className='show-more'>
+          <Button >Show More</Button>
+        </div>
 
       <section className="about-us">
         <h1>About Us</h1>

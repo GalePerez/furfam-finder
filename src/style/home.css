@@ -1,33 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand&display=swap');
 
 .body {
     background-color: var(--background);
     overflow-x: hidden;
 }
 
-.featured-pets > h2 {
-    color: var(--accent);
-}
-
 .cover-photo {
-    width: 100vw;
-}
-
-.title {
-    position: absolute;
-    top: 300px;
-    font-family: 'Koulen', Arial, Helvetica, sans-serif;
-    font-size: 10vw;
-    color: rgb(0, 47, 12);
-    
-}
-
-h4 {
-    font-family: 'Koulen', Arial, Helvetica, sans-serif;
-    font-size: 3vw;
-    color: rgb(34, 85, 49);
+    display: none;
 }
 
 @media screen and (min-width: 768px) {
-
+    .cover-photo {
+        display: block;
+    }
+    
+    .title {
+        z-index: 3;
+        position: absolute;
+        top: 28vh;
+        left: 20vw;
+        right: auto;
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 10vw;
+        color: rgb(8, 61, 21);
+        margin-left: 10px;
+        
+    }
+    
+    h4 {
+        z-index: 3;
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 3vw;
+        color: rgb(34, 85, 49);
+        margin-left: 10px;
+    }
+    
+    .featured-pets > h2 {
+        color: var(--accent);
+        font-family: 'Khand', sans-serif;
+        text-align: center;
+    }
+    
+    .show-more {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
 }
