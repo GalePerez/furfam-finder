@@ -1,5 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .body {
     background-color: var(--background);
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+h2 {
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    color: var(--primary-700);
+    font-size: 5rem;
+    text-align: center;
+}
+
+.body > p {
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    color: var(--accent);
+    font-size: 2rem;
+    text-align: center;
+}
+
+label {
+    color: var(--primary-800);
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+
+}
+
+.form {
+    display: flex;
+    border-radius: 20px;
+}
+
+label {
+    font-size: 1.5rem;
 }
