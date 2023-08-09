@@ -18,21 +18,31 @@ function Home() {
         <div className='show-more'>
           <Button >Show More</Button>
         </div>
-
-      <section className="about-us">
-        <h1>About Us</h1>
-        <p>At FurFam Finder, we're on a mission to unite hearts and paws.
-            <br/>
-            With Love and companion, we connect famillies with their forever companions.
-            <br/>
-            Join us in making tails wag and heart soar.
-        </p>
-        <Link to="about-us">Learn More</Link>
+      <section className='about-us-container'>
+        <div className='about-us-photos'>
+            <img src='https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*' style={{width: "200px"}} />
+            <img src='https://www.campbellrivervet.com/wp-content/uploads/sites/282/2022/05/Husky-1000x650.jpg' style={{width: "300px"}}/>
+            <img src='https://www.dutch.com/cdn/shop/articles/shutterstock_149121098.jpg?v=1668634262' style={{width: "350px"}}/>
+        </div>
+        <section className="about-us">
+          <h1 className='about-us-title'>About Us</h1>
+          <p className='about-us-text'>At FurFam Finder, we're on a mission to unite hearts and paws.
+              <br/>
+              With Love and companion, we connect famillies with their forever companions.
+              <br/>
+              
+              Join us in making tails wag and heart soar.
+              <br/>
+              <Link to="about-us">Learn More</Link>
+          </p>
+        </section>
       </section>
       <section className="contact">
-        <h1>QUESTIONS?</h1>
-        <Link to="contact-us">Contact Us</Link>
+          <h1>QUESTIONS?</h1>
+          <Link to="contact-us">Contact Us</Link>
       </section>
+
+      
     </div>
         </>
     )

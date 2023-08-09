@@ -39,6 +39,10 @@ li > a {
     font-family: 'Staatliches', arial;
     font-size: 1.9rem;
   }
+
+  .nav-item:hover {
+    color: var(--primary-500);
+  }
   
   .name {
     color: var(--background);

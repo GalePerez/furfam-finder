@@ -48,5 +48,43 @@
         margin: 20px;
     }
 
+    .about-us-container {
+        display: flex;
+    }
+
+    .about-us-photos > img {
+        border-radius: 30px;
+        margin: 5px;
+        opacity: 80%;
+    }
+
+    .about-us-photos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-us {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .about-us-title {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 8vw;
+        color: var(--primary-800);
+        margin-right: 50px;
+    }
+
+    .about-us-text {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 1.8rem;
+        color: var(--primary-700);
+    }
+
+
+
+
 
 }
