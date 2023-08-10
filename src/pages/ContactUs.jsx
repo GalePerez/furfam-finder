@@ -15,7 +15,7 @@ function ContactUs() {
     return ( 
         <>
       <div className='body'>
-        <h2>Contact Us</h2>
+        <h2 className='contact-us-title'>Contact Us</h2>
         <p>Have questions or feedback? We'd love to hear from you!</p>
         <section className='form'>
           <form onSubmit={handleSubmit}>

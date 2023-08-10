@@ -8,7 +8,7 @@
     overflow-y: hidden;
 }
 
-h2 {
+.contact-us-title {
     font-family: 'Koulen', Arial, Helvetica, sans-serif;
     color: var(--primary-700);
     font-size: 5rem;

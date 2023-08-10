@@ -15,6 +15,98 @@ a {
     display: none;
 }
 
+.title {
+display: none;
+}
+
+h4 {
+    z-index: 3;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-700);
+    text-align: center;
+    margin: 20px;
+}
+
+.featured-pets > h2 {
+    color: var(--accent);
+    font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.show-more {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+
+.about-us-photos > img {
+    display: none;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-400);
+    margin-bottom: 50px;
+}
+
+    .about-us-title {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 4.5rem;
+        color: var(--primary-800);
+        text-align: center;
+    }
+
+    .about-us-text {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+        color: var(--primary-700);
+        padding: 10px;
+    }
+
+.questions {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 3.5rem;
+        color: var(--primary-700);
+        text-align: center;
+    }
+
+.contact-us-text {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 4.5rem;
+        color: var(--primary-800);
+        text-align: center;
+    }
+
+.contact-links {
+    display: flex;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        color: var(--primary-700);
+    }
+
+    .icon-text {
+        font-size: 1.28rem;
+        margin-left: 20px;
+    }
+
 @media screen and (min-width: 768px) {
     .cover-photo {
         display: block;
