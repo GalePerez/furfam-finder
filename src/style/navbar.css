@@ -35,7 +35,7 @@ li > a {
 
   .nav-item {
     margin-left: 20px;
-    color: var(--background);;
+    color: var(--primary-100);;
     font-family: 'Staatliches', arial;
     font-size: 1.9rem;
   }
@@ -72,7 +72,7 @@ li > a {
   .line1, .line2, .line3 {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: var(--primary-300);
     margin: 3px;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   }
@@ -90,7 +90,7 @@ li > a {
 
     .nav-menu {
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 0;
         width: 100%;
         padding-left: 20px;
@@ -115,7 +115,7 @@ li > a {
     
     
       .nav-link {
-        color: #fff;
+        color: #ffffff;
         text-decoration: none;
         font-size: 1.2rem;
         transition: color 0.3s ease-in-out;
