@@ -16,10 +16,7 @@
 }
 
 .body > p {
-    font-family: 'Koulen', Arial, Helvetica, sans-serif;
-    color: var(--accent);
-    font-size: 2rem;
-    text-align: center;
+    display: none;
 }
 
 .form-label {
@@ -29,7 +26,7 @@
 }
 
 .form-control {
-    width: 30rem;
+    width: 15.5rem;
 }
 
 .form {
@@ -42,5 +39,39 @@
     justify-content: center;
 }
 
+@media screen and (min-width: 768px) {
+    .contact-us-title {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        color: var(--primary-700);
+        font-size: 5rem;
+        text-align: center;
+    }
+    
+    .body > p {
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        color: var(--accent);
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .form-label {
+        color: var(--primary-800);
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+        font-size: 1.5rem;
+    }
+    
+    .form-control {
+        width: 30rem;
+    }
+    
+    .form {
+        display: flex;
+        border-radius: 20px;
+    }
+    
+    .button {
+        display: flex;
+        justify-content: center;
+    }
 
-
+}
