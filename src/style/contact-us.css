@@ -22,10 +22,14 @@ h2 {
     text-align: center;
 }
 
-label {
+.form-label {
     color: var(--primary-800);
     font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
 
+.form-control {
+    width: 30rem;
 }
 
 .form {
@@ -33,6 +37,10 @@ label {
     border-radius: 20px;
 }
 
-label {
-    font-size: 1.5rem;
+.button {
+    display: flex;
+    justify-content: center;
 }
+
+
+
