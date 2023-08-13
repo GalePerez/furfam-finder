@@ -97,6 +97,13 @@ function NavBar() {
                         </li>
                         <li className="nav-item">
                         </li>
+                        <li className="nav-item">
+                            <Link to="/login" className="nav-link">
+                            Login
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                        </li>
                     </ul>
                 </div>
                 <div className={`burger ${isOpen ? 'active' : ''}`} onClick={toggleNavbar}>

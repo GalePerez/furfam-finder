@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import OurAnimals from "./pages/OurAnimals";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
+import Login from "./pages/Login";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/main.css';
 
 
@@ -19,6 +21,7 @@ function App() {
           <Route path="our-animals" element={<OurAnimals />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="about-us" element={<AboutUs />} />
+          <Route path="login" element={<Login />} />
         </Routes>
       <MainContainer />
 
