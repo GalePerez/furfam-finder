@@ -6,6 +6,8 @@ const validationSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
   lastName: Yup.string().required('Last name is required'),
   contactInfo: Yup.string().required('Contact info is required'),
+  typeOfPet: Yup.string().required('Type of pet is required'),
+  PetName: Yup.string().required('Pet name is required'),
   
 });
 
@@ -14,6 +16,9 @@ function AdoptionForm({ onSubmit }) {
     firstName: '',
     lastName: '',
     contactInfo: '',
+    typeOfPet: '',
+    PetName:''
+
     
   };
 
@@ -39,6 +44,18 @@ function AdoptionForm({ onSubmit }) {
           <Field type="text" id="contactInfo" name="contactInfo" />
           <ErrorMessage name="contactInfo" component="div" />
         </div>
+
+        <div>
+            <label htmlFor="typeOfPet">Type of Pet</label>
+            <Field type="text" id="typeOfPet" name="typeOfPet" />
+            <ErrorMessage name="typeOfPet" component="div" />
+          </div>
+
+          <div>
+            <label htmlFor="PetName">Pet Name</label>
+            <Field type="text" id="PetName" name="PetName" />
+            <ErrorMessage name="PetName" component="div" />
+          </div>
         
         <button type="submit">Submit</button>
       </Form>

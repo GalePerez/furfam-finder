@@ -8,6 +8,13 @@ function OurAnimals() {
     setShowAdoptionForm(!showAdoptionForm);
   };
 
+  const handleSubmit = async (values, actions) => {
+    // Your submission logic here
+
+    actions.resetForm();
+    setShowAdoptionForm(false);
+  }
+  
   return (
     <div>
       <h2>Our Animals</h2>
@@ -15,7 +22,7 @@ function OurAnimals() {
       <button onClick={toggleAdoptionForm}>Adopt Now</button>
 
       
-      {showAdoptionForm && <AdoptionForm />}
+      {showAdoptionForm && <AdoptionForm onSubmit={handleSubmit} />}
       
       
     </div>
