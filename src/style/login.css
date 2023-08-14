@@ -1,5 +1,6 @@
 .form_container {
     width: 45%
+    
 }
 
 @media screen and (max-width: 1000px) {
@@ -12,6 +13,10 @@
     .form_container {
         width: 65%
     }
+}
+
+.login {
+    background-color: rgb(87,118,102);
 }
 
 
