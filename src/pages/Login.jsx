@@ -19,7 +19,7 @@ function Login() {
               <h3 className='text-center'> Sign In</h3>
               <div className='mb-2'>
               <label htmlFor="email">UserID</label>
-              <input type="ea_id" placeholder='Enter UderID' className='form-control' value={email} onChange={(event) => setEmail(event.target.value)} />
+              <input type="ea_id" placeholder='Enter UserID' className='form-control' value={email} onChange={(event) => setEmail(event.target.value)} />
             </div>
             <div className='mb-2'>
               <label htmlFor="password">Password</label>
