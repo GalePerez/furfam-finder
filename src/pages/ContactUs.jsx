@@ -1,63 +1,69 @@
-import { useState } from 'react';
-import "../style/contact-us.css"
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object({
+  name: Yup.string().required('Name is required'),
+  email: Yup.string().email('Invalid email format').required('Email is required'),
+  message: Yup.string().required('Message is required'),
+});
 
 function ContactUs() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      console.log('Name:', name);
-      console.log('Email:', email);
-      console.log('Message:', message);
-    };
-    return ( 
-        <>
-      <div className='body'>
-        <h2 className='contact-us-title'>Contact Us</h2>
-        <p>Have questions or feedback? We'd love to hear from you!</p>
-        <section className='form'>
-          <form onSubmit={handleSubmit}>
+  return (
+    <div className='body'>
+      <h2 className='contact-us-title'>Contact Us</h2>
+      <p>Have questions or feedback? We'd love to hear from you!</p>
+      <section className='form'>
+        <Formik
+          initialValues={{
+            name: '',
+            email: '',
+            message: '',
+          }}
+          validationSchema={validationSchema}
+          onSubmit={(values, { resetForm }) => {
+            console.log(values);
+            resetForm();
+          }}
+        >
+          <Form>
             <label htmlFor="name" className='form-label'>Name:</label>
-            <input
+            <Field
               type="text"
               id="name"
               className='form-control'
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
+              name="name"
             />
-            <br/>
+            <ErrorMessage name="name" component="div" className="error" />
+
             <label htmlFor="email" className='form-label'>Email:</label>
-            <input
+            <Field
               type="email"
               id="email"
               className='form-control'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              name="email"
               placeholder='name@example.com'
             />
-            <br/>
+            <ErrorMessage name="email" component="div" className="error" />
+
             <label htmlFor="message" className='form-label'>Message:</label>
-            <textarea
+            <Field
+              as="textarea"
               id="message"
               className='form-control'
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
+              name="message"
               rows={3}
             />
-            <br/>
+            <ErrorMessage name="message" component="div" className="error" />
+
             <div className='button'>
               <button type="submit">Submit</button>
             </div>
-          </form>
-        </section>
+          </Form>
+        </Formik>
+      </section>
     </div>
-        </>
-    )
+  );
 }
 
-export default ContactUs
+export default ContactUs;
