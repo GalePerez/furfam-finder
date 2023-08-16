@@ -10,25 +10,29 @@ import Login from "./pages/Login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/main.css';
 import Admin from "./pages/Admin";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="our-animals" element={<OurAnimals />} />
-          <Route path="contact-us" element={<ContactUs />} />
-          <Route path="about-us" element={<AboutUs />} />
-          <Route path="login" element={<Login />} />
-          <Route path="admin" element={<Admin />} />
-        </Routes>
-      <MainContainer />
+    <Provider store={store}>
+      <BrowserRouter>
+        <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="our-animals" element={<OurAnimals />} />
+            <Route path="contact-us" element={<ContactUs />} />
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="login" element={<Login />} />
+            <Route path="admin" element={<Admin />} />
+          </Routes>
+        <MainContainer />
 
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </Provider>
     </>
 
 

@@ -1,8 +1,24 @@
-import { useState } from "react";
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setPetList } from '../../store/petActions';
+ 
 
 function AdminPetList() {
-    const [pets, setPets] = useState([]);
-    const [error, setError] = useState(null);
+  const pets = useSelector((state) => state.pets.petList);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchPets() {
+      try {
+        const response = await fetch(); // API FOR PETS
+        const data = await response.json();
+        dispatch(setPetList(data.pet_list));
+      } catch (error) {
+        console.error('Error fetching pets:', error);
+      }
+    }
+    fetchPets();
+  }, [dispatch]);
     return <>
 
 <div>
