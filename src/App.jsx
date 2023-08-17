@@ -12,6 +12,11 @@ import './style/main.css';
 import Admin from "./pages/Admin";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import AdminAdoptionList from "./pages/admin-functions/AdminAdoptionList";
+import AdminPetList from "./pages/admin-functions/AdminPetList";
+import AdminShelterList from "./pages/admin-functions/AdminShelterList";
+import AdminFeaturedPets from "./pages/AdminFeaturedPets";
+import AdminContainer from "./pages/admin-functions/AdminContainer";
 
 
 function App() {
@@ -29,6 +34,13 @@ function App() {
             <Route path="admin" element={<Admin />} />
           </Routes>
         <MainContainer />
+        <AdminContainer />
+              <Routes>
+              <Route path="/featured-pets" element={<AdminFeaturedPets />} />
+              <Route path="/admin-pet-list" element={<AdminPetList />} />
+              <Route path="/admin-adoption-list" element={<AdminAdoptionList />} />
+              <Route path="/admin-shelter-list" element={<AdminShelterList />} />
+              </Routes>
 
         <Footer />
       </BrowserRouter>

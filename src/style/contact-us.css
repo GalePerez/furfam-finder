@@ -48,6 +48,7 @@
     }
     
     .body > p {
+        display: block;
         font-family: 'Koulen', Arial, Helvetica, sans-serif;
         color: var(--accent);
         font-size: 2rem;
