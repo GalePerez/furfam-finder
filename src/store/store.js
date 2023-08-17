@@ -6,7 +6,6 @@ const rootReducer = combineReducers({
   pets: petReducer,
   animals: animalReducer,
   
-  // Add other reducers here if needed
 });
 
 const store = createStore(rootReducer);

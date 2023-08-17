@@ -45,23 +45,23 @@ function Home() {
         <section className='icon-container'>
           <Link to={"https://mail.google.com/mail/u/0/#inbox"}  target="_blank">
             <div className='icons'>
-              <i class="fa-regular fa-envelope fa-2xl" style= {{color: "#3a4f44;"}}></i>
+              <i className="fa-regular fa-envelope fa-2xl" style= {{color: "#3a4f44"}}></i>
               <p className='icon-text'>furfamily@gmail.com</p>
             </div>
           </Link>
             <div className='icons'>
-              <i class="fa-solid fa-phone fa-2xl" style={{color: "#3a4f44;"}}></i>
+              <i className="fa-solid fa-phone fa-2xl" style={{color: "#3a4f44"}}></i>
               <p className='icon-text'>091234560</p>
             </div>
           <Link to={"https://www.instagram.com/</section>"} target="_blank">
             <div className='icons'>
-              <i class="fa-brands fa-instagram fa-2xl" style={{color: "#3a4f44;"}}></i>
+              <i className="fa-brands fa-instagram fa-2xl" style={{color: "#3a4f44"}}></i>
               <p className='icon-text'>furfamily_finder</p>
             </div>
           </Link>
           <Link to={"https://www.facebook.com/</section>"} target="_blank">
             <div className='icons'>
-              <i class="fa-brands fa-facebook fa-2xl" style={{color: "#3a4f44;"}}></i>
+              <i className="fa-brands fa-facebook fa-2xl" style={{color: "#3a4f44"}}></i>
               <p className='icon-text'>Furfamily Finder</p>
             </div>
           </Link>
