@@ -3,8 +3,23 @@ import '../style/home.css';
 import '../style/main.css';
 import FeaturedPets from '../components/FeaturedPets';
 import Button from '../components/button';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function Home() {
+  const [featuredPets, setfeaturedPets] = useState([])
+
+    const fetchFeaturedPets = async () => {
+        const res = await axios('http://localhost:8000/api/v1/pets')
+        const pet = res.data.data
+        setfeaturedPets(pet.slice(0, 4))
+        
+    }
+
+    useEffect(() => {
+      fetchFeaturedPets()
+    }, [])
     return (
         <>
     <div className='body'>
@@ -13,7 +28,11 @@ function Home() {
         <h4>Discover your perfect FurFam today! 🐾🏠 Adopt, love, cherish.</h4>
         <section className="featured-pets">
             <h2>Featured Pets for Adoption:</h2>
-            <FeaturedPets />
+            {
+              featuredPets.map(
+                pet=> <FeaturedPets key={pet.id} image={pet.image} species={pet.species} name={pet.name} breed={pet.breed}  />
+              )
+            }
         </section>
         <div className='show-more'>
           <Link to="/our-animals"><Button >Show More</Button></Link>
