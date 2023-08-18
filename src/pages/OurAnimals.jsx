@@ -3,6 +3,8 @@ import AdoptionForm from '../components/AdoptionForm';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPets } from '../store/animalReducers';
+import { Link } from 'react-router-dom';
+import OurAnimalCard from '../components/OurAnimalsCard';
 
 function OurAnimals() {
   const dispatch = useDispatch()
@@ -33,14 +35,11 @@ function OurAnimals() {
     <div>
       <h2>Our Animals</h2>
       <div className="d-flex flex-wrap">
-        {pets.map(pet => (
-          <div key={pet.id} className="animal-card">
-            <img src={pet.image} alt={`${pet.name}`} />
-            <h3>{pet.species}</h3>
-            <p>Name: {pet.name}</p>
-            <p>Breed: {pet.breed}</p>
-          </div>
-        ))}
+        {
+          pets.map(
+            pet => <OurAnimalCard key={pet.id} id={pet.id} image={pet.image} species={pet.species} name={pet.name} breed={pet.breed} /> 
+          )
+        }
       </div>
       <button onClick={toggleAdoptionForm}>Adopt Now</button>
 

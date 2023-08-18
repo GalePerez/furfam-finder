@@ -1,62 +1,22 @@
-import { useDispatch, useSelector } from "react-redux";
-import { setPets } from "../store/animalReducers";
-import { useEffect } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom"
 
-function OurAnimalCard() {
-    const dispatch = useDispatch()
-    const pets = useSelector((state) => state.pets)
-
-    const fetchAnimals = async () => {
-    const res = await axios('http://localhost:8000/api/v1/pets')
-    dispatch(setPets(res.data.data))
-  }
-
-  useEffect(() => {
-    fetchAnimals()
-  }, [])
-    return (
-        <>
-        <div className="d-flex flex-wrap">
-        <h3>Pet List</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Species</th>
-              <th>Name</th>
-              <th>Breed</th>
-              <th>Birthday</th>
-              <th>Gender</th>
-              <th>Size</th>
-              <th>Description</th>
-              <th>Availability Status</th>
-              <th>Image</th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            {pets.map(pet => (
-              <tr key={pet.id}>
-                <td>{pet.id}</td>
-                <td>{pet.species}</td>
-                <td>{pet.name}</td>
-                <td>{pet.breed}</td>
-                <td>{pet.birthday}</td>
-                <td>{pet.gender}</td>
-                <td>{pet.size}</td>
-                <td>{pet.description}</td>
-                <td>{pet.availability_status}</td>
-                <td>{pet.image}</td>
-                <td>{pet.shelter_id}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+function OurAnimalCard(props) {
+  const { id, image, species, name, breed } = props
+  return (
+    <>
+      <div className="card" style={{width: "18rem"}}>
+            <img src={image} className="card-img-top" alt={image} />
+            <div className="card-body">
+              <h5 className="card-title">{species}</h5>
+              <p className="card-text">Name: {name}</p>
+              <p className="card-text">Breed: {breed}</p>
+              <Link to={`/pet-info/${id}`}>Full Details</Link>
+          </div>
       </div>
-        
-        </>
-    )
+    </>
+  )
+    
+
 }
 
 export default OurAnimalCard

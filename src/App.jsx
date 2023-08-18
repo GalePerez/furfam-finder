@@ -19,6 +19,7 @@ import AdminFeaturedPets from "./pages/admin-functions/AdminFeaturedPets";
 import AdminContainer from "./components/AdminAside";
 import AdminAside from "./components/AdminAside";
 import OurAnimalCard from "./components/OurAnimalsCard";
+import PetInfo from "./pages/PetInfo";
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/our-animals" element={<OurAnimals />} />
-            <Route path="/our-animalscard" element={<OurAnimalCard />} />
+            <Route path="/pet-info/:id" element={<PetInfo />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/login" element={<Login />} />
