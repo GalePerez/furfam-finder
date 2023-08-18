@@ -15,8 +15,9 @@ import store from "./store/store";
 import AdminAdoptionList from "./pages/admin-functions/AdminAdoptionList";
 import AdminPetList from "./pages/admin-functions/AdminPetList";
 import AdminShelterList from "./pages/admin-functions/AdminShelterList";
-import AdminFeaturedPets from "./pages/AdminFeaturedPets";
-import AdminContainer from "./pages/admin-functions/AdminContainer";
+import AdminFeaturedPets from "./pages/admin-functions/AdminFeaturedPets";
+import AdminContainer from "./components/AdminAside";
+import AdminAside from "./components/AdminAside";
 
 
 function App() {
@@ -27,21 +28,16 @@ function App() {
         <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="our-animals" element={<OurAnimals />} />
-            <Route path="contact-us" element={<ContactUs />} />
-            <Route path="about-us" element={<AboutUs />} />
-            <Route path="login" element={<Login />} />
-            <Route path="admin" element={<Admin />} />
+            <Route path="/our-animals" element={<OurAnimals />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin-featured-pets" element={<AdminFeaturedPets />} />
+            <Route path="/admin-pet-list" element={<AdminPetList />} />
+            <Route path="/admin-adoption-list" element={<AdminAdoptionList />} />
+            <Route path="/admin-shelter-list" element={<AdminShelterList />} />
           </Routes>
         <MainContainer />
-        <AdminContainer />
-              <Routes>
-              <Route path="/featured-pets" element={<AdminFeaturedPets />} />
-              <Route path="/admin-pet-list" element={<AdminPetList />} />
-              <Route path="/admin-adoption-list" element={<AdminAdoptionList />} />
-              <Route path="/admin-shelter-list" element={<AdminShelterList />} />
-              </Routes>
-
         <Footer />
       </BrowserRouter>
     </Provider>

@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import AdminAdoptionList from "./admin-functions/AdminAdoptionList";
 import AdminPetList from "./admin-functions/AdminPetList";
 import AdminShelterList from "./admin-functions/AdminShelterList";
-import AdminFeaturedPets from "./AdminFeaturedPets";
-import AdminContainer from "./admin-functions/AdminContainer";
+import AdminFeaturedPets from "./admin-functions/AdminFeaturedPets";
+import AdminContainer from "../components/AdminAside";
+import AdminAside from "../components/AdminAside";
 
 function Admin() {
-    return <>
-    
-            </>
+    return (
+        <>
+        </>
+    )
 }
 
 export default Admin
