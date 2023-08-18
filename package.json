@@ -12,6 +12,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "formik": "^2.4.3",
     "jquery": "^3.7.0",
