@@ -1,13 +1,11 @@
-import { createStore, combineReducers } from 'redux';
-import animalReducer from './animalReducers';
-import petReducer from './petReducers';
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { petsSlice } from "./animalReducers";
 
 const rootReducer = combineReducers({
-  pets: petReducer,
-  animals: animalReducer,
-  
-});
+  pets: petsSlice.reducer
+})
+const store = configureStore({
+  reducer: rootReducer
+})
 
-const store = createStore(rootReducer);
-
-export default store;
+export default store

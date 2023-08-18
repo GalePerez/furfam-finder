@@ -1,25 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import AdoptionForm from '../components/AdoptionForm';
+import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { setAnimalList } from '../store/animalActions';
+import { setPets } from '../store/animalReducers';
 
 function OurAnimals() {
-  const animal = useSelector((state) => state.animals.animalList);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
+  const pets = useSelector((state) => state.pets)
   const [showAdoptionForm, setShowAdoptionForm] = useState(false);
 
+  const fetchAnimals = async () => {
+    const res = await axios('http://localhost:8000/api/v1/pets')
+    dispatch(setPets(res.data.data))
+  }
+
   useEffect(() => {
-    async function fetchAnimals() {
-      try {
-        const response = await fetch() // API HERE
-        const data = await response.json();
-        dispatch(setAnimalList(data.animal_list));
-      } catch (error) {
-        console.error('Error fetching animals:', error);
-      }
-    }
-    fetchAnimals();
-  }, [dispatch]);
+    fetchAnimals()
+  }, [])
   
   const toggleAdoptionForm = () => {
     setShowAdoptionForm(!showAdoptionForm);
@@ -35,7 +32,16 @@ function OurAnimals() {
   return (
     <div>
       <h2>Our Animals</h2>
-      PET LISTING !!!
+      <div className="d-flex flex-wrap">
+        {pets.map(pet => (
+          <div key={pet.id} className="animal-card">
+            <img src={pet.image} alt={`${pet.name}`} />
+            <h3>{pet.species}</h3>
+            <p>Name: {pet.name}</p>
+            <p>Breed: {pet.breed}</p>
+          </div>
+        ))}
+      </div>
       <button onClick={toggleAdoptionForm}>Adopt Now</button>
 
       

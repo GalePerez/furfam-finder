@@ -1,13 +1,23 @@
-import AdminContainer from '../../components/AdminContainer';
+import { useDispatch, useSelector } from "react-redux";
+import { setPets } from "../store/animalReducers";
+import { useEffect } from "react";
+import axios from "axios";
 
+function OurAnimalCard() {
+    const dispatch = useDispatch()
+    const pets = useSelector((state) => state.pets)
 
-function AdminPetList() {
-  
-  return <>
+    const fetchAnimals = async () => {
+    const res = await axios('http://localhost:8000/api/v1/pets')
+    dispatch(setPets(res.data.data))
+  }
 
-    <AdminContainer>
-
-      <div>
+  useEffect(() => {
+    fetchAnimals()
+  }, [])
+    return (
+        <>
+        <div className="d-flex flex-wrap">
         <h3>Pet List</h3>
         <table>
           <thead>
@@ -22,11 +32,11 @@ function AdminPetList() {
               <th>Description</th>
               <th>Availability Status</th>
               <th>Image</th>
-              <th>Shelter ID</th>
+              
             </tr>
           </thead>
           <tbody>
-            {pets.map((pet) => (
+            {pets.map(pet => (
               <tr key={pet.id}>
                 <td>{pet.id}</td>
                 <td>{pet.species}</td>
@@ -44,10 +54,9 @@ function AdminPetList() {
           </tbody>
         </table>
       </div>
-    </AdminContainer>
-
-
-  </>
+        
+        </>
+    )
 }
 
-export default AdminPetList
+export default OurAnimalCard

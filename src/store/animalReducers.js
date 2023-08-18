@@ -1,17 +1,13 @@
-const initialState = {
-    animalList: [],
-  };
-  
-  const animalReducer = (state = initialState, action) => {
-    switch (action.type) {
-      case 'SET_ANIMAL_LIST':
-        return {
-          ...state,
-          animalList: action.payload,
-        };
-      default:
-        return state;
+import { createSlice } from "@reduxjs/toolkit";
+
+export const petsSlice = createSlice({
+  name: 'pets',
+  initialState: [],
+  reducers: {
+    setPets: (state, action) => {
+      return action.payload
     }
-  };
+  }
+})
   
-  export default animalReducer;
+  export const { setPets } = petsSlice.actions
