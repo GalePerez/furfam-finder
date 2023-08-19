@@ -33,7 +33,7 @@ function OurAnimals() {
   }
   
   return (
-    <main className="d-flex">
+    <main className="d-flex body">
     
     <div>
       <h2>Our Animals</h2>

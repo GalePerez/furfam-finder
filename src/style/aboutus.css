@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+.body1 {
+    background-color: var(--background);
+}
+
+.about-us-container1 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.about-us-description {
+    text-align: center;
+    color: var(--primary-700);
+    font-size: 30px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+}
+
+.about-us1 {
+    text-align: center;
+    color: var(--primary-700);
+    font-size: 100px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+}
+ 
+.about-us-title {
+    text-align: left;
+    color: var(--primary-700);
+    font-size: 50px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+}
+
+.about-us-info {
+    color: var(--primary-900);
+    font-size: 25px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+}
+
+.about-us-ending {
+    text-align: center;
+    color: var(--primary-700);
+    font-size: 40px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    
+}
