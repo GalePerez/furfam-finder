@@ -9,7 +9,7 @@ function FeaturedPets(props) {
         <> 
             <div className="featured-pets-container">
         
-                <div key={id} className="card" style={{ width: "18rem" }}>
+                <div key={id} className="card" style={{ width: "20rem" }}>
                     <img src={image} className="card-img-top" alt={name} />
                     <div className="card-body">
                         <h5 className="card-title">{species}</h5>

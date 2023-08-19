@@ -28,11 +28,13 @@ function Home() {
         <h4>Discover your perfect FurFam today! 🐾🏠 Adopt, love, cherish.</h4>
         <section className="featured-pets">
             <h2>Featured Pets for Adoption:</h2>
+            <section className="d-flex flex-wrap">
             {
               featuredPets.map(
                 pet=> <FeaturedPets key={pet.id} image={pet.image} species={pet.species} name={pet.name} breed={pet.breed}  />
               )
             }
+            </section>
         </section>
         <div className='show-more'>
           <Link to="/our-animals"><Button >Show More</Button></Link>
