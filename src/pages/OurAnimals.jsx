@@ -3,8 +3,9 @@ import AdoptionForm from '../components/AdoptionForm';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPets } from '../store/animalReducers';
-import { Link } from 'react-router-dom';
 import OurAnimalCard from '../components/OurAnimalsCard';
+
+
 
 function OurAnimals() {
   const dispatch = useDispatch()
@@ -32,6 +33,8 @@ function OurAnimals() {
   }
   
   return (
+    <main className="d-flex">
+    
     <div>
       <h2>Our Animals</h2>
       <div className="d-flex flex-wrap">
@@ -48,6 +51,7 @@ function OurAnimals() {
       
       
     </div>
+    </main>
   );
 }
 

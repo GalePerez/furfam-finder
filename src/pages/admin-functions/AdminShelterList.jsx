@@ -2,8 +2,6 @@ import { useState } from "react";
 import AdminContainer from "../../components/AdminContainer";
 
 function AdminShelterList() {
-  const [shelters, setShelters] = useState([]);
-  const [error, setError] = useState(null);
 
   return <>
 
