@@ -74,7 +74,7 @@ function PetInfo() {
               <p className="">Availability Status: {pet.availability_status}</p>
             </div>
         </div>
-        <div className='adopt-now-button'>
+        <div className='adopt-now-button body'>
             <button onClick={toggleAdoptionForm} style={{width: "10rem"}}>Adopt Now</button>
 
       
