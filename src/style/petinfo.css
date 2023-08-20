@@ -18,9 +18,38 @@
 .pet-info-descriptions {
     margin: 10px;
     text-align: left;
-        color: var(--primary-800);
-        font-size: 25px;
-        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    color: var(--primary-800);
+    font-size: 25px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
 }
+
+.adopt-now-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.adoption-procedure {
+    background-color: var(--primary-300);
+    border-radius: 20px;
+    margin: 20px;
+}
+
+    .procedure-title {
+        text-align: center;
+        color: var(--primary-700);
+        font-size: 30px;
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    }
+
+    .procedure {
+        padding: 10px;
+        text-align: left;
+        color: var(--primary-800);
+        font-size: 20px;
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    }
 
 

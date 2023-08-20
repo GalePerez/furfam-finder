@@ -74,12 +74,14 @@ function PetInfo() {
               <p className="">Availability Status: {pet.availability_status}</p>
             </div>
         </div>
-
-        <button onClick={toggleAdoptionForm}>Adopt Now</button>
+        <div className='adopt-now-button'>
+            <button onClick={toggleAdoptionForm} style={{width: "10rem"}}>Adopt Now</button>
 
       
-      {showAdoptionForm && <AdoptionForm onSubmit={handleSubmit} />}
-      
+            {showAdoptionForm && <AdoptionForm onSubmit={handleSubmit} />}
+
+        </div>
+        
         
 
         </>

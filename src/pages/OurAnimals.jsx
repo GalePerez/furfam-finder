@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import AdoptionForm from '../components/AdoptionForm';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPets } from '../store/animalReducers';
@@ -10,7 +9,6 @@ import '../style/ouranimals.css'
 function OurAnimals() {
   const dispatch = useDispatch()
   const pets = useSelector((state) => state.pets)
-  const [showAdoptionForm, setShowAdoptionForm] = useState(false);
 
   const fetchAnimals = async () => {
     const res = await axios('http://localhost:8000/api/v1/pets')
