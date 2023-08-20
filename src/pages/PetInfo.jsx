@@ -59,7 +59,7 @@ function PetInfo() {
 
     return (
         <>
-        <div className="pet-info-container">
+        <div className="pet-info-container body">
           <div key={pet.id} className="pet-info-img">
               <img src={pet.image} alt={pet.name} className="" style={{ width: "28rem" }}/>
               <p className="pet-info-name">Name: {pet.name}</p>
