@@ -21,16 +21,6 @@ function OurAnimals() {
     fetchAnimals()
   }, [])
   
-  const toggleAdoptionForm = () => {
-    setShowAdoptionForm(!showAdoptionForm);
-  };
-
-  const handleSubmit = async (values, actions) => {
-    // Your submission logic here
-
-    actions.resetForm();
-    setShowAdoptionForm(false);
-  }
   
   return (
     <main className="d-flex body">
@@ -44,10 +34,6 @@ function OurAnimals() {
           )
         }
       </div>
-      <button onClick={toggleAdoptionForm}>Adopt Now</button>
-
-      
-      {showAdoptionForm && <AdoptionForm onSubmit={handleSubmit} />}
       
       
     </div>

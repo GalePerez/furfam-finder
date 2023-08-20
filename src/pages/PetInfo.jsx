@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 import '../style/petinfo.css'
+import AdoptionForm from '../components/AdoptionForm';
 
 function PetInfo() {
     const { id } = useParams()
@@ -42,6 +43,20 @@ function PetInfo() {
     fetchAnimals()
   }, [])
 
+  const toggleAdoptionForm = () => {
+    setShowAdoptionForm(!showAdoptionForm);
+  };
+
+  const handleSubmit = async (values, actions) => {
+    // Your submission logic here
+
+    actions.resetForm();
+    setShowAdoptionForm(false);
+  }
+
+  const [showAdoptionForm, setShowAdoptionForm] = useState(false);
+
+
     return (
         <>
         <div className="pet-info-container">
@@ -59,6 +74,12 @@ function PetInfo() {
               <p className="">Availability Status: {pet.availability_status}</p>
             </div>
         </div>
+
+        <button onClick={toggleAdoptionForm}>Adopt Now</button>
+
+      
+      {showAdoptionForm && <AdoptionForm onSubmit={handleSubmit} />}
+      
         
 
         </>
