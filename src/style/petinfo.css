@@ -1,0 +1,24 @@
+
+.pet-info-container {
+    display: flex;
+    padding: 20px;
+}
+
+.pet-info-img {
+    margin: 10px;
+}
+
+    .pet-info-name {
+        text-align: center;
+        color: var(--primary-700);
+        font-size: 55px;
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    }
+
+.pet-info-descriptions {
+    margin: 10px;
+    text-align: left;
+        color: var(--primary-800);
+        font-size: 25px;
+        font-family: 'Koulen', Arial, Helvetica, sans-serif;
+}

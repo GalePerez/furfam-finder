@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+
+.our-animals-title {
+    text-align: center;
+    color: var(--primary-700);
+    font-size: 80px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+
+}
+
+.our-animals-container {
+    justify-content: center;
+}

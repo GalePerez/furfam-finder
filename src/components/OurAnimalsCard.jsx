@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import '../style/ouranimalscard.css'
 
 function OurAnimalCard(props) {
   const { id, image, species, name, breed } = props
   return (
     <>
-      <div className="card" style={{width: "18rem"}}>
+      <div className="card our-animals-card" style={{width: "18rem"}}>
             <img src={image} className="card-img-top" alt={image} />
             <div className="card-body">
               <h5 className="card-title">{species}</h5>

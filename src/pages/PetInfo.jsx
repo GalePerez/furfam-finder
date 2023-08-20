@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
+import '../style/petinfo.css'
 
 function PetInfo() {
     const { id } = useParams()
@@ -43,22 +44,23 @@ function PetInfo() {
 
     return (
         <>
-        <div className="d-flex flex-wrap">
-         <div key={pet.id} className="card m-2" style={{ width: "18rem" }}>
-              <img src={pet.image} alt={pet.name} className="card-img-top" />
-              <div className="card-body">
-                <h5 className="card-title">Species: {pet.species}</h5>
-                <p className="card-text">Name: {pet.name}</p>
-                <p className="card-text">Breed: {pet.breed}</p>
-                <p className="card-text">Birthday: {pet.birthday}</p>
-                <p className="card-text">Gender: {pet.gender}</p>
-                <p className="card-text">Size: {pet.size}</p>
-                <p className="card-text">Description: {pet.description}</p>
-                <p className="card-text">Availability Status: {pet.availability_status}</p>
-              </div>
+        <div className="pet-info-container">
+          <div key={pet.id} className="pet-info-img">
+              <img src={pet.image} alt={pet.name} className="" style={{ width: "28rem" }}/>
+              <p className="pet-info-name">Name: {pet.name}</p>
+          </div>
+            <div className="pet-info-descriptions">
+              <p className="">Species: {pet.species}</p>
+              <p className="t">Breed: {pet.breed}</p>
+              <p className="">Birthday: {pet.birthday}</p>
+              <p className="">Gender: {pet.gender}</p>
+              <p className="">Size: {pet.size}</p>
+              <p className="">Description: {pet.description}</p>
+              <p className="">Availability Status: {pet.availability_status}</p>
             </div>
-        
         </div>
+        
+
         </>
     )
 }

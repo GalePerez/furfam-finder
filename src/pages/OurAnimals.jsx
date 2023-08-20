@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPets } from '../store/animalReducers';
 import OurAnimalCard from '../components/OurAnimalsCard';
-
+import '../style/ouranimals.css'
 
 
 function OurAnimals() {
@@ -36,8 +36,8 @@ function OurAnimals() {
     <main className="d-flex body">
     
     <div>
-      <h2>Our Animals</h2>
-      <div className="d-flex flex-wrap">
+      <h2 className='our-animals-title'>Our Animals</h2>
+      <div className="d-flex flex-wrap our-animals-container">
         {
           pets.map(
             pet => <OurAnimalCard key={pet.id} id={pet.id} image={pet.image} species={pet.species} name={pet.name} breed={pet.breed} /> 
