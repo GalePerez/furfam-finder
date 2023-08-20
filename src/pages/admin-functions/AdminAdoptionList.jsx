@@ -7,9 +7,9 @@ function AdminAdoptionList() {
     <AdminContainer>
       <div>
         <h3>Adoption List</h3>
-        {error ? (
+        {/* {error ? (
           <p>{error}</p>
-        ) : (
+        ) : ( */}
           <table>
             <thead>
               <tr>
@@ -22,7 +22,7 @@ function AdminAdoptionList() {
               </tr>
             </thead>
             <tbody>
-              {adoptions.map((adoption) => (
+              {/* {adoptions.map((adoption) => (
                 <tr key={adoption.id}>
                   <td>{adoption.id}</td>
                   <td>{adoption.firstName}</td>
@@ -31,10 +31,10 @@ function AdminAdoptionList() {
                   <td>{adoption.typeOfPet}</td>
                   <td>{adoption.PetName}</td>
                 </tr>
-              ))}
+              ))} */}
             </tbody>
           </table>
-        )}
+        {/* )} */}
       </div>
     </AdminContainer>
     </>

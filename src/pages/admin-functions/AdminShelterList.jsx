@@ -8,9 +8,9 @@ function AdminShelterList() {
     <AdminContainer>
       <div>
         <h3>Shelter List</h3>
-        {error ? (
+        {/* {error ? (
           <p>{error}</p>
-        ) : (
+        ) : ( */}
           <table>
             <thead>
               <tr>
@@ -22,7 +22,7 @@ function AdminShelterList() {
               </tr>
             </thead>
             <tbody>
-              {shelters.map((shelter) => (
+              {/* {shelters.map((shelter) => (
                 <tr key={shelter.id}>
                   <td>{shelter.id}</td>
                   <td>{shelter.name}</td>
@@ -30,10 +30,10 @@ function AdminShelterList() {
                   <td>{shelter.contactInfo}</td>
                   <td>{shelter.user_id}</td>
                 </tr>
-              ))}
+              ))} */}
             </tbody>
           </table>
-        )}
+        {/* )} */}
       </div>
     </AdminContainer>
 
