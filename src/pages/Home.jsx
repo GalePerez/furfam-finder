@@ -31,7 +31,7 @@ function Home() {
             <section className="d-flex flex-wrap">
             {
               featuredPets.map(
-                pet=> <FeaturedPets key={pet.id} image={pet.image} species={pet.species} name={pet.name} breed={pet.breed}  />
+                pet=> <FeaturedPets key={pet.id} id={pet.id} image={pet.image} species={pet.species} name={pet.name} breed={pet.breed}  />
               )
             }
             </section>

@@ -20,24 +20,27 @@ function PetInfo() {
     })
 
     const fetchAnimals = async () => {
-    const res = await axios(`http://localhost:8000/api/v1/pets/${id}`) 
-    const pet = res.data.data 
-    const petObj = {
-      species: pet.species,
-      image: pet.image,
-      name: pet.name,
-      breed: pet.breed,
-      birthday: pet.birthday,
-      gender: pet.gender,
-      size: pet.size,
-      description: pet.description,
-      availability_status: pet.availability_status
-    }
+      try {
+        const res = await axios(`http://localhost:8000/api/v1/pets/${id}`) 
+        const pet = res.data.data 
+        console.log(res)
+        const petObj = {
+          species: pet.species,
+          image: pet.image,
+          name: pet.name,
+          breed: pet.breed,
+          birthday: pet.birthday,
+          gender: pet.gender,
+          size: pet.size,
+          description: pet.description,
+          availability_status: pet.availability_status
+        } 
+        setPet(petObj)
+       } catch (error) {
+          console.error('Error fetching pet data:', error);
+        }
+      }
 
-    setPet(petObj)
-
-    }
-  
 
   useEffect(() => {
     fetchAnimals()
