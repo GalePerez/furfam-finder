@@ -250,15 +250,14 @@ function AdminPetList() {
           <ErrorMessage name="image" component="div" className="error" />
 
          
-          {/* <button type="submit">Add Pet</button> */}
+          <button type="submit">Add Pet</button>
           </div>
         </Form>
       </Formik>
     </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">Understood</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style={{width: "100px"}}>Close</button>
         </div>
       </div>
     </div>
