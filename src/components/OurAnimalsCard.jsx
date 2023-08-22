@@ -5,6 +5,7 @@ function OurAnimalCard(props) {
   const { id, image, species, name, breed } = props
   return (
     <>
+    <Link to={`/pet-info/${id}`}>
       <div className="card our-animals-card" style={{width: "18rem"}}>
             <img src={image} className="card-img-top" alt={image} />
             <div className="card-body">
@@ -14,6 +15,7 @@ function OurAnimalCard(props) {
               <Link to={`/pet-info/${id}`}>Full Details</Link>
           </div>
       </div>
+    </Link>
     </>
   )
     

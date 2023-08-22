@@ -1,0 +1,36 @@
+.pet-list-title {
+    text-align: center;
+    color: var(--primary-700);
+    font-size: 100px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+}
+
+thead {
+    background-color: var(--primary-600);
+}
+
+td {
+    background-color: var(--primary-200);
+    margin: padding 20px;
+}
+
+table, th ,td {
+    border: 2px solid rgb(93, 115, 101);
+    overflow: auto;
+    width: 200px;
+    text-align: center;
+    height: 10px;
+}
+
+.add-pet-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-pet-text {
+    text-align: center;
+    color: var(--primary-700);
+    font-size: 80px;
+    font-family: 'Koulen', Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+}

@@ -12,6 +12,7 @@ function AdminAside() {
                         </button>
                     </Link>
                 </div>
+                <br/>
                 <div className="button2">
                     <Link to="/admin-pet-list">
                         <button>
@@ -19,6 +20,7 @@ function AdminAside() {
                         </button>
                     </Link>
                 </div>
+                <br/>
                 <div className="button3">
                     <Link to="/admin-adoption-list">
                         <button>
@@ -26,6 +28,7 @@ function AdminAside() {
                         </button>
                     </Link>
                 </div>
+                <br/>
                 <div className="button4">
                     <Link to="/admin-shelter-list">
                         <button>

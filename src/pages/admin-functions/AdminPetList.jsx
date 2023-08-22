@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addPet } from '../../store/addPetActions';
 import { Form, Field, ErrorMessage, Formik } from 'formik';
 import * as Yup from 'yup';
+import '../../style/adminpetlist.css'
 
 
 const validationSchema = Yup.object({
@@ -110,12 +111,12 @@ function AdminPetList() {
   
   return ( 
   <>
-  <main className="border d-flex flex-column">
+  <main className="d-flex">
     <AdminContainer>
 
       <div>
-        <h3>Pet List</h3>
-        <table>
+        <h1 className='pet-list-title'>Pet List</h1>
+        <table style={{width: "60vw"}}>
           <thead>
             <tr>
               <th>ID</th>
@@ -125,9 +126,7 @@ function AdminPetList() {
               <th>Birthday</th>
               <th>Gender</th>
               <th>Size</th>
-              <th>Description</th>
               <th>Availability Status</th>
-              <th>Image</th>
               <th>Shelter ID</th>
             </tr>
           </thead>
@@ -141,77 +140,97 @@ function AdminPetList() {
                 <td>{pet.birthday}</td>
                 <td>{pet.gender}</td>
                 <td>{pet.size}</td>
-                <td>{pet.description}</td>
                 <td>{pet.availability_status}</td>
-                <td>{pet.image}</td>
                 <td>{pet.shelter_id}</td>
               </tr>
             ))}
             <div>
-              {petData.map((pet) => (
-                <div key={pet.id}>
-                  <span>{pet.name}</span>
-                  <button onClick={() => handleDeletePet(pet.id)}>Remove</button>
-                </div>
-              ))}
             </div>
           </tbody>
         </table>
       </div>
 
-  <div className="border d-flex flex-column">
-  <h3>Add New Pet</h3>
+  <div className="add-pet-container">
+      <h3 className='add-pet-text'>Add New Pet</h3>
       <Formik
         initialValues={newPet}
         validationSchema={validationSchema}
         onSubmit={handleAddPet}
       >
+        
         <Form>
-          <label>Species:</label>
-          <Field type="text" name="species" />
+          <div className='form d-flex flex-wrap'>
+          <label className='form-label'>Species:</label>
+          <Field 
+          type="text"
+           name="species" 
+           className='form-control'
+           />
           <ErrorMessage name="species" component="div" className="error" />
 
-        
-          <label>Name:</label>
-          <Field type="text" name="name" />
+          <br/>
+          <label className='form-label'>Name:</label>
+          <Field type="text"
+           name="name"
+           className='form-control' 
+           />
           <ErrorMessage name="name" component="div" className="error" />
 
-        
-          <label>Breed:</label>
-          <Field type="text" name="breed" />
+          <br/>
+          <label className='form-label'>Breed:</label>
+          <Field type="text"
+           name="breed" 
+           className='form-control'
+           />
           <ErrorMessage name="breed" component="div" className="error" />
 
-          
-          <label>Birthday:</label>
-          <Field type="text" name="birthday" />
+          <br/>
+          <label className='form-label'>Birthday:</label>
+          <Field type="text"
+           name="birthday"
+           className='form-control' 
+           />
           <ErrorMessage name="birthday" component="div" className="error" />
 
-       
-          <label>Gender:</label>
-          <Field type="text" name="gender" />
+          <br/>      
+          <label className='form-label'>Gender:</label>
+          <Field type="text"
+           name="gender"
+           className='form-control' 
+           />
           <ErrorMessage name="gender" component="div" className="error" />
 
-       
-          <label>Size:</label>
-          <Field type="text" name="size" />
+          <br/>
+          <label className='form-label'>Size:</label>
+          <Field type="text" 
+          name="size" 
+          className='form-control'
+          />
           <ErrorMessage name="size" component="div" className="error" />
 
-          
-          <label>Description:</label>
-          <Field type="text" name="description" />
+          <br/>
+          <label className='form-label'>Description:</label>
+          <Field type="text"
+          name="description"
+          className='form-control' 
+          />
           <ErrorMessage name="description" component="div" className="error" />
 
-         
-          <label>Availability Status:</label>
-          <Field type="text" name="availability_status" />
+          <br/>
+          <label className='form-label'>Availability Status:</label>
+          <Field type="text"
+          name="availability_status" 
+          className='form-control'
+          />
           <ErrorMessage
             name="availability_status"
             component="div"
-            className="error"
+            className="error form-control"
+
           />
 
-          
-          <label>Image:</label>
+          <br/>
+          <label className='form-label'>Image:</label>
           <input
             type="file"
             accept="image/*"
@@ -222,6 +241,7 @@ function AdminPetList() {
 
          
           <button type="submit">Add Pet</button>
+          </div>
         </Form>
       </Formik>
     </div>
