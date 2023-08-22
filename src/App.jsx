@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import OurAnimals from "./pages/OurAnimals";
 import ContactUs from "./pages/ContactUs";
 import AboutUs from "./pages/AboutUs";
-import Login from "./pages/Login";
+// import Login from "./pages/Login";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/main.css';
 import Admin from "./pages/Admin";
@@ -34,7 +34,7 @@ function App() {
             <Route path="/pet-info/:id" element={<PetInfo />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/login" element={<Login />} />
+            {/* <Route path="/login" element={<Login />} /> */}
             <Route path="/admin-featured-pets" element={<AdminFeaturedPets />} />
             <Route path="/admin-pet-list" element={<AdminPetList />} />
             <Route path="/admin-adoption-list" element={<AdminAdoptionList />} />

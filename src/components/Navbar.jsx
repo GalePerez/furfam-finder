@@ -95,11 +95,11 @@ function NavBar() {
                             Contact Us
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to="/login" className="nav-link">
                             Login
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                         <Link to="/admin-featured-pets" className="nav-link">
                             Admin
