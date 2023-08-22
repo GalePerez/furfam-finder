@@ -94,13 +94,22 @@ function AdminPetList() {
     }
   };
 
+    const handleDeletePet = async  (value) => {
+      try {
+        await axios.delete(`http://localhost:8000/api/v1/pets/${value}`);
+      } catch (error) {
+      }
+    }
+  
+
   useEffect(() => {
     fetchAdminPets()
   }, [])
   
 
   
-  return <>
+  return ( 
+  <>
   <main className="border d-flex flex-column">
     <AdminContainer>
 
@@ -138,6 +147,14 @@ function AdminPetList() {
                 <td>{pet.shelter_id}</td>
               </tr>
             ))}
+            <div>
+              {petData.map((pet) => (
+                <div key={pet.id}>
+                  <span>{pet.name}</span>
+                  <button onClick={() => handleDeletePet(pet.id)}>Remove</button>
+                </div>
+              ))}
+            </div>
           </tbody>
         </table>
       </div>
@@ -208,10 +225,11 @@ function AdminPetList() {
         </Form>
       </Formik>
     </div>
+
     </AdminContainer>
 
 </main>
   </>
-}
+  )};
 
 export default AdminPetList
