@@ -7,7 +7,7 @@ function OurAnimalCard(props) {
     <>
     <Link to={`/pet-info/${id}`}>
       <div className="card our-animals-card" style={{width: "18rem"}}>
-            <img src={image} className="card-img-top" alt={image} />
+            <img src={image} className="card-img-top" alt={image}/>
             <div className="card-body">
               <h5 className="card-title">{species}</h5>
               <p className="card-text">Name: {name}</p>

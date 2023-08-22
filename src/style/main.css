@@ -134,6 +134,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--primary-600);
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
   padding: 0;

@@ -150,7 +150,120 @@ function AdminPetList() {
         </table>
       </div>
 
-  <div className="add-pet-container">
+  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Add Pet
+  </button>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Pet</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div className="add-pet-container">
+      <Formik
+        initialValues={newPet}
+        validationSchema={validationSchema}
+        onSubmit={handleAddPet}
+      >
+        
+        <Form>
+          <div className=' d-flex flex-wrap'>
+          <label className='form-label'>Species:</label>
+          <Field 
+          type="text"
+           name="species" 
+           className='form-control'
+           />
+          <ErrorMessage name="species" component="div" className="error" />
+
+          <br/>
+          <label className='form-label'>Name:</label>
+          <Field type="text"
+           name="name"
+           className='form-control' 
+           />
+          <ErrorMessage name="name" component="div" className="error" />
+
+          <br/>
+          <label className='form-label'>Breed:</label>
+          <Field type="text"
+           name="breed" 
+           className='form-control'
+           />
+          <ErrorMessage name="breed" component="div" className="error" />
+
+          <br/>
+          <label className='form-label'>Birthday:</label>
+          <Field type="text"
+           name="birthday"
+           className='form-control' 
+           />
+          <ErrorMessage name="birthday" component="div" className="error" />
+
+          <br/>      
+          <label className='form-label'>Gender:</label>
+          <Field type="text"
+           name="gender"
+           className='form-control' 
+           />
+          <ErrorMessage name="gender" component="div" className="error" />
+
+          <br/>
+          <label className='form-label'>Size:</label>
+          <Field type="text" 
+          name="size" 
+          className='form-control'
+          />
+          <ErrorMessage name="size" component="div" className="error" />
+
+          <br/>
+          <label className='form-label'>Description:</label>
+          <Field type="text"
+          name="description"
+          className='form-control' 
+          />
+          <ErrorMessage name="description" component="div" className="error" />
+
+          <br/>
+          <label className='form-label'>Availability Status:</label>
+          <Field type="text"
+          name="availability_status" 
+          className='form-control'
+          />
+          <ErrorMessage
+            name="availability_status"
+            component="div"
+            className="error form-control"
+
+          />
+
+          <br/>
+          <label className='form-label'>Image:</label>
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            onChange={handleInputChange}
+          />
+          <ErrorMessage name="image" component="div" className="error" />
+
+         
+          {/* <button type="submit">Add Pet</button> */}
+          </div>
+        </Form>
+      </Formik>
+    </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>             
+  {/* <div className="add-pet-container">
       <h3 className='add-pet-text'>Add New Pet</h3>
       <Formik
         initialValues={newPet}
@@ -244,7 +357,7 @@ function AdminPetList() {
           </div>
         </Form>
       </Formik>
-    </div>
+    </div> */}
 
     </AdminContainer>
 
